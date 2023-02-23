@@ -10,18 +10,20 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'b93706da-2fb7-4e89-a1e4-6673c9238b36'
+  dockerRegistryServiceConnection: 'walmartpayment'
   imageRepository: 'saitejarepo'
   containerRegistry: 'saiteja.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-
+  k8sconnection: kuberser
+  Namespace: walmartdev
+  imagepullsecret: test
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
-  displayName: Build and push stage
+  displayName: Build stage
   jobs:
   - job: Build
     displayName: Build
