@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'walmartpayment'
+  dockerRegistryServiceConnection: 'Saiteja'
   imageRepository: 'saitejarepo'
   containerRegistry: 'saiteja.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
