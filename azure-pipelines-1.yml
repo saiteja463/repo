@@ -47,7 +47,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'walmart-dev'
+    environment: 'dev'
     strategy:
       runOnce:
         deploy:
